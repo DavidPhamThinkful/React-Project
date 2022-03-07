@@ -51,48 +51,57 @@ function SignupFormPage() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+  <div className="signup-container">
+    <div className="signup-wrap">
+      <h1 className="login-head">Koura</h1>
+    <form className="signup-form" onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
-      <label>
+      <label className="email-label">
         Email
         <input
+        className="email-input"
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
       </label>
-      <label>
+      <label className="user-label">
         Username
         <input
+          className="text-input"
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
       </label>
-      <label>
+      <label className="password-label">
         Password
         <input
+          className="password-input"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </label>
-      <label>
+      <label className="confirmedPassword-label">
         Confirm Password
         <input
+          className="password-input"
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required
         />
       </label>
-      <button type="submit">Sign Up</button>
+      <button className="signup-button" type="submit" disabled={errors.length === 0 ? false : true}>Sign Up</button>
     </form>
+    </div>
+  </div>
   );
 }
 

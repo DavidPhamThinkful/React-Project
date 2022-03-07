@@ -1,0 +1,29 @@
+.form-container{
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-wrap{
+border-radius: 20px;
+background-color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 50%;
+z-index: 2;
+}
+
+.login-form {
+    background-color: white;
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    padding: 5rem 0;
+    z-index: 2;
+}

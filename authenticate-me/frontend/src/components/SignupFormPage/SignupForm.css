@@ -1,0 +1,36 @@
+.signup-container{
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.signup-wrap{
+border-radius: 20px;
+background-color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 50%;
+z-index: 2;
+}
+
+.signup-form{
+border-radius: 20px;
+background-color: white;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 50%;
+height: 50%;
+padding: 5rem 0;
+z-index: 2;
+}
+
+.email-label, .user-label, .password-label, .confirmedPassword-label{
+    padding: 2px;
+    font-weight: bold;
+    margin: 0;
+}
+

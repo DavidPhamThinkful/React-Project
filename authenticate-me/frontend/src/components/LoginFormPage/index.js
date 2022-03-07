@@ -25,13 +25,21 @@ function LoginFormPage() {
       });
   }
 
+  const demoUser = async (e) => {
+    e.preventDefault();
+    return dispatch(sessionActions.login({ credential: 'Demo-user', password: 'pasword'}))
+  }
+
   return (
-    <form onSubmit={handleSubmit}>
+  <div className='form-container'>
+   <div className='from-wrap'>
+    <h1 className='login-header'>Koura</h1>
+    <form className='login-form' onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
-      <label>
-        Username or Email
+      <label className='username-label'>
+        <h4 className='user-label' >Username or Email</h4>
         <input
           type="text"
           value={credential}
@@ -39,7 +47,7 @@ function LoginFormPage() {
           required
         />
       </label>
-      <label>
+      <label className='password-label'>
         Password
         <input
           type="password"
@@ -48,8 +56,11 @@ function LoginFormPage() {
           required
         />
       </label>
-      <button type="submit">Log In</button>
+      <button className='login-button' type="submit">Log In</button>
+      <button className='demo-button' onClick={demoUser}>Demo User</button>
     </form>
+  </div>
+</div>
   );
 }
 
