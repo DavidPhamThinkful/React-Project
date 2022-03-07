@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
@@ -12,6 +13,27 @@ function SignupFormPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
+
+  useEffect(() => {
+    dispatch(sessionActions.getAllUsers());
+  }, [dispatch])
+
+  useEffect(()=> {
+    const errors = [];
+    if (username.length === 0) {
+      errors.push('Username field is required!');
+    }
+    if (username.length > 60) {
+      errors.push('Username must be 60 characters or less!');
+    }
+    if(email.length === 0){
+      errors.push('Email field is required!')
+    }
+    if (password.length === 0 || confirmPassword.length === 0) {
+      errors.push('Must type a password!')
+    }
+    setErrors(errors);
+  }, [username, email, password, confirmPassword])
 
   if (sessionUser) return <Redirect to="/" />;
 
