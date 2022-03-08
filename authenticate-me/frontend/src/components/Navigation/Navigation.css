@@ -1,0 +1,47 @@
+.header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 3px;
+    margin: 0 auto;
+}
+
+.header-container{
+    position: fixed;
+    top: 0;
+    left: -25px;
+    margin: 0 auto;
+    width: 105vw;
+}
+
+.home-but{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.home-but:visited{
+    text-decoration: none;
+    color: black;
+}
+
+.profile-dropdown{
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+}
+
+.dropdown-profile > li{
+list-style: none;
+font-weight: bold;
+padding: 4px;
+}
+
+.newquestion-button{
+    background-color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+}

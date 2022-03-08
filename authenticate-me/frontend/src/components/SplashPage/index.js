@@ -19,3 +19,5 @@ function SplashPage() {
         )
     }
 }
+
+export default SplashPage;
