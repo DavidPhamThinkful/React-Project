@@ -4,6 +4,7 @@ import './SplashPage.css'
 import LoginFormPage from "../LoginFormPage";
 import SignupFormPage from "../SignupFormPage";
 import SplashPicture from "../SplashPicture";
+import Footer from '../Footer';
 
 function SplashPage() {
     const sessionUser = useSelector(state => state.session.user)

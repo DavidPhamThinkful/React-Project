@@ -1,0 +1,12 @@
+.homepage-modal{
+    height: 95px;
+    font-weight: bold;
+    text-align: center;
+    color: azure;
+    background-color: white;
+    border: none;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
