@@ -18,7 +18,7 @@ function Navigation({ isLoaded }){
     sessionLinks = (
       <div className='header-container'>
       <ul className='header'>
-        <NavLink to='/' className='home-but'>Home</NavLink>
+        <NavLink to='/' className='home-button'>Home</NavLink>
         <QuestionModal modalClose={modalClose} />
       <ProfileButton user={sessionUser} />
       </ul>

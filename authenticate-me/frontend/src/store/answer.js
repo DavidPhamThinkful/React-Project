@@ -1,9 +1,9 @@
 import { csrfFetch } from "./csrf";
 
-const LOAD = 'question/LOAD';
-const ADD_ONE = 'question/ADD_ONE';
-const REMOVE = 'question/REMOVE';
-const UPDATE = 'question/UPDATE';
+const LOAD = 'answer/LOAD';
+const ADD_ONE = 'answer/ADD_ONE';
+const REMOVE = 'answer/REMOVE';
+const UPDATE = 'answer/UPDATE';
 
 const load = (list) => ({
     type:LOAD,
@@ -16,18 +16,18 @@ const addOneAnswer = (answer) => ({
 });
 
 const editAnswer = (answer) => ({
-    type:REMOVE,
+    type:UPDATE,
     answer
 });
 
 const removeAnswer = (answer) => ({
-    type:UPDATE,
+    type:REMOVE,
     answer
 });
 
 
 export const createAnswer = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/answers`, {
+    const response = await csrfFetch(`/api/answers`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -42,7 +42,7 @@ export const createAnswer = (data) => async (dispatch) => {
 }
 
 export const deleteAnswer = (id) => async (dispatch) => {
-    const response = await csrfFetch(`api/answers/${id}`, {
+    const response = await csrfFetch(`/api/answers/${id}`, {
         method: 'DELETE',   
     })
     if (response.ok){
@@ -53,7 +53,7 @@ export const deleteAnswer = (id) => async (dispatch) => {
 }
 
 export const getAllAnswers = () => async (dispatch) => {
-    const response = await csrfFetch(`api/answers`);
+    const response = await csrfFetch(`/api/answers`);
         
    
     if (response.ok){
@@ -65,7 +65,7 @@ export const getAllAnswers = () => async (dispatch) => {
 
 
 export const getAnswer = (id) => async (dispatch) => {
-    const response = await csrfFetch(`api/answers/${id}`);
+    const response = await csrfFetch(`/api/answers/${id}`);
         
    
     if (response.ok){
@@ -76,7 +76,7 @@ export const getAnswer = (id) => async (dispatch) => {
 }
 
 export const updateAnswer = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/answers/${data.id}`, {
+    const response = await csrfFetch(`/api/answers/${data.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'

@@ -27,7 +27,7 @@ const editQuestion = (question) => ({
 
 
 export const createQuestion = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/questions`, {
+    const response = await csrfFetch(`/api/questions`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export const createQuestion = (data) => async (dispatch) => {
 
 
 export const getAllQuestions = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/questions`);
+    const response = await csrfFetch(`/api/questions`);
         
    
     if (response.ok){
@@ -54,7 +54,7 @@ export const getAllQuestions = (data) => async (dispatch) => {
 }
 
 export const deleteQuestion = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/questions/${data.id}`, {
+    const response = await csrfFetch(`/api/questions/${data.id}`, {
         method: 'DELETE',   
     })
     if (response.ok){
@@ -65,7 +65,7 @@ export const deleteQuestion = (data) => async (dispatch) => {
 }
 
 export const updateQuestion = (data) => async (dispatch) => {
-    const response = await csrfFetch(`api/questions/${data.id}`, {
+    const response = await csrfFetch(`/api/questions/${data.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -80,7 +80,7 @@ export const updateQuestion = (data) => async (dispatch) => {
 }
 
 export const getQuestion = (id) => async (dispatch) => {
-    const response = await csrfFetch(`api/questions/${id}`);
+    const response = await csrfFetch(`/api/questions/${id}`);
         
    
     if (response.ok){
@@ -110,7 +110,8 @@ const questionReducer = (state = initialState, action) => {
             delete newState[action.question]
             return newState;
         }
-        default: return state;
+        default: 
+        return state;
     }
 }
 

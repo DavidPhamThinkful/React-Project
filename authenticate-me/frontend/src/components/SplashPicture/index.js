@@ -9,4 +9,4 @@ function SplashPicture() {
     )
 }
 
-export default SplashPicture
+export default SplashPicture;

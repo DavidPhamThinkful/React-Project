@@ -1,47 +1,85 @@
-.header{
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    box-shadow: 0 2px 3px;
-    margin: 0 auto;
+.header {
+  background-color: white;
+  box-shadow: 0 1px 3px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.header-container{
-    position: fixed;
-    top: 0;
-    left: -25px;
-    margin: 0 auto;
-    width: 105vw;
+.header-container {
+  position: fixed;
+  top: 0;
+  left: -30px;
+  margin: 0 auto;
+  width: 100.5vw;
 }
 
-.home-but{
-    text-decoration: none;
-    font-size: 20px;
+html {
+  margin: 0;
 }
 
-.home-but:visited{
-    text-decoration: none;
-    color: black;
+.home-button {
+  text-decoration: none;
+  font-size: 20px;
 }
 
-.profile-dropdown{
-    background-color: white;
-    cursor: pointer;
-    border: none;
-    font-size: 20px;
+.home-button:visited {
+  text-decoration: none;
+  color: black;
 }
 
-.dropdown-profile > li{
-list-style: none;
-font-weight: bold;
-padding: 4px;
+.profile-dropdown {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-size: 20px;
 }
 
-.newquestion-button{
-    background-color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border: none;
+.profile-drop {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 5;
+}
+
+.profile-drop > li {
+  list-style: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.newquestion-button {
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logout-button {
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+  padding: .5em 1em;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: background-color .25s, color .25s;
+  cursor: pointer;
+}
+
+.newquestion-button {
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+  padding: 5px;
+  margin: 10px;
+  transition: background-color .25s, color .25s;
+  cursor: pointer;
 }

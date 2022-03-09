@@ -18,6 +18,13 @@ const HomePage = () => {
         
     }, [dispatch])
 
-
+    return (
+        <div className="question-container">
+            <NavLink className='question-title' keys={question.id} to={`/questions/${question.id}`}>{question.title}</NavLink>
+            <p className="username">Asked by {question?.User?.username}</p>
+            <p className="question-description">{question?.description}</p>   
+        </div>
+    )
    
 }
+export default HomePage;

@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { NavLink, useHistory } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
-import './Navigation.css';
+import './Navigation.css'
 
 function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const history = useHistory();
   const [showMenu, setShowMenu] = useState(false);
-  
+
   const openMenu = () => {
     if (showMenu) return;
     setShowMenu(true);
   };
-  
+
   useEffect(() => {
     if (!showMenu) return;
 
@@ -23,8 +22,8 @@ function ProfileButton({ user }) {
     };
 
     document.addEventListener('click', closeMenu);
-  
-    return () => document.removeEventListener("click", closeMenu);
+
+    return () => document.removeEventListener('click', closeMenu);
   }, [showMenu]);
 
   const logout = (e) => {
@@ -35,19 +34,18 @@ function ProfileButton({ user }) {
 
   return (
     <>
-      <button className="profile-dropdown" onClick={openMenu}>
-        {user.username}
-        </button>
-      {showMenu && (
-        <ul className="dropdown-profile">
-          <li className="user-dropdown">{user.username}</li>
-          <li className="email-dropdown">{user.email}</li>
-          <li>
-            <button className="logout-button" onClick={{logout}}>Log Out!</button>
-          </li>
-          
-          </ul>
-      )}
+    <button className='profile-dropdown' onClick={openMenu}>
+      {user.username}
+    </button>
+    {showMenu && (
+      <ul className='profile-drop'>
+        <li className='username-dropdown'>{user.username}</li>
+        <li className='email-dropdown'>{user.email}</li>
+        <li>
+          <button className='logout-button' onClick={logout}>Log Out</button>
+        </li>
+      </ul>
+    )}
     </>
   );
 }
