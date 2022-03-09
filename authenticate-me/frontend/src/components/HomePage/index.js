@@ -3,28 +3,33 @@ import { useSelector, useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { getAllQuestions } from "../../store/question";
 import './HomePage.css';
-import * as sessionsActions from '../../store/session';
+import * as sessionActions from '../../store/session';
 import HomePageModal from '../HomePageModal';
 
 const HomePage = () => {
+    const dispatch = useDispatch();
     const question = useSelector(state => state.question.entries)
     const sessionUser = useSelector(state => state.session.user)
-    const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(sessionsActions.restoreUser());
-        dispatch(sessionsActions.getAllUsers());
         dispatch(getAllQuestions());
+        dispatch(sessionActions.restore());
+        dispatch(sessionActions.getAllUsers());
         
     }, [dispatch])
 
+    if(sessionUser) {
     return (
+    <div className="article-container">
+        <HomePageModal />
+        
         <div className="question-container">
             <NavLink className='question-title' keys={question.id} to={`/questions/${question.id}`}>{question.title}</NavLink>
             <p className="username">Asked by {question?.User?.username}</p>
             <p className="question-description">{question?.description}</p>   
         </div>
+        </div>
     )
-   
+    }
 }
 export default HomePage;

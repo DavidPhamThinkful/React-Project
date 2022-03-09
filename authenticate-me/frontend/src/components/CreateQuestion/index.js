@@ -45,7 +45,7 @@ return(
             <form className="question-form" onSubmit={handleSubmit}>
              <h1>Ask a Question!</h1>
              <ul>
-                 {errors.map((error, idx) => <li className="errors" key={idx}>error</li>)}
+                 {errors.map((error, idx) => <li className="errors" key={idx}>{error}</li>)}
              </ul>
              <label className="title-label">
                  <input

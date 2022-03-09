@@ -37,12 +37,12 @@ export const createQuestion = (data) => async (dispatch) => {
     if (response.ok){
         const question = await response.json();
         dispatch(addOneQuestion(question));
-        return question
+        return question;
     }
 }
 
 
-export const getAllQuestions = (data) => async (dispatch) => {
+export const getAllQuestions = () => async (dispatch) => {
     const response = await csrfFetch(`/api/questions`);
         
    
