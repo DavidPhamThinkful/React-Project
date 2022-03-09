@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.form-wrap{
+.form-wrapper{
 border-radius: 20px;
 background-color: white;
 display: flex;
@@ -14,6 +14,7 @@ align-items: center;
 flex-direction: column;
 width: 50%;
 z-index: 2;
+border-style: solid;
 }
 
 .login-form {
@@ -26,4 +27,81 @@ z-index: 2;
     height: 50%;
     padding: 5rem 0;
     z-index: 2;
+}
+
+#password{
+    background-color: grey;
+}
+#username{
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.login-header{
+    margin-top: 50px;
+    font-size: 50px;
+
+}
+
+.signup-link{
+    text-decoration: none;
+}
+
+.login-button{
+    border-radius: 5px;
+    border: none;
+    background-color: aqua;
+    font-weight: 700;
+    padding: .5em 1em;
+    margin: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.demo-button{
+  border-radius: 5px;
+    border: none;
+    background-color: aqua;
+    font-weight: 700;
+    padding: .5em 1em;
+    margin: 10px;
+    text-transform: uppercase;
+    cursor: pointer;  
+}
+
+.signup-direct{
+    text-decoration: none;
+    padding-bottom: 15px;
+    font-size: 24px;
+}
+
+.signup-direct:visited {
+    color: black;
+    cursor: pointer;
+}
+
+.signup-direct:visited {
+    font-weight: bold;
+}
+
+.signup-direct:hover {
+    font-weight: bold;
+}
+
+.username-label {
+    margin: 0;
+}
+
+.password-label {
+    margin: 0;
+}
+
+.userInput {
+    border: 3px;
+    border-style: inset;
+}
+
+.passInput {
+    border: 3px;
+    border-style: inset;
 }

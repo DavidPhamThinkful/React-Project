@@ -2,11 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
-import HomePage from './components/HomePage';
 import * as sessionActions from "./store/session";
-import Navigation from "./components/Navigation";
 import SplashPage from "./components/SplashPage";
 import SplashPicture from "./components/SplashPicture";
+import HomePage from './components/HomePage';
+import Navigation from "./components/Navigation";
+
 
 
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <SplashPage />
-            <HomePage />
+            
+            
           </Route>
           <Route path="/signup">
             <SplashPicture />

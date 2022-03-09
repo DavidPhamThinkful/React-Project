@@ -1,9 +1,10 @@
 .main-container {
+  background-image: url('../../../public/image/login.png');
   height: auto;
   min-height: 100%;
   width: 100%;
   position: fixed;
-  background-image: url('../../../public/image/login.png');
   background-position: center;
   background-size: cover;
+  z-index: -1;
 }

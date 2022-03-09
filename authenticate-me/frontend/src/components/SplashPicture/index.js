@@ -5,7 +5,7 @@ function SplashPicture() {
         <div className='main-container'>
            <div className='greet'>
                </div> 
-            </div>
+        </div>
     )
 }
 
