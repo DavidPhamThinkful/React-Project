@@ -1,0 +1,19 @@
+.answer-button {
+    border: none;
+    background-color: aqua;
+    border-radius: 5px;
+    padding: .5em 1em;
+    margin: 10px;
+    margin-bottom: 75px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.answer-button:visited {
+    color: grey;
+}
+
+.answer-button:hover {
+    font-weight: bold;
+}
+

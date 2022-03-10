@@ -7,7 +7,8 @@ import SplashPage from "./components/SplashPage";
 import SplashPicture from "./components/SplashPicture";
 import HomePage from './components/HomePage';
 import Navigation from "./components/Navigation";
-
+import UpdateQuestion  from "./components/UpdateQuestion";
+import QuestionDetail from "./components/QuestionDetail";
 
 
 function App() {
@@ -31,6 +32,12 @@ function App() {
             <SplashPicture />
             <SignupFormPage />
           </Route>
+          <Route exact path='/questions/:id'>
+            <QuestionDetail />
+            </Route>
+          <Route path='/questions/:id/edit'>
+            <UpdateQuestion />
+            </Route>
         </Switch>
       )}
     </>

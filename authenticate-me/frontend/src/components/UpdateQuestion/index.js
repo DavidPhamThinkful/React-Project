@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import * as questionActions from '../../store/question'
+import * as questionActions from '../../store/question';
 import * as sessionActions from '../../store/session';
 import './UpdateQuestion.css'
 
@@ -40,7 +40,7 @@ const UpdateQuestion = () => {
         title,
         description
         }
-    await dispatch(questionActions.UpdateQuestion(editQuestion))
+    await dispatch(questionActions.updateQuestion(editQuestion))
     history.push(`/questions/${id}`)
     }
 
