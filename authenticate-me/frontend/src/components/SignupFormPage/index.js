@@ -55,7 +55,7 @@ function SignupFormPage() {
   return (
   <div className="signupform-container">
     <div className="signupform-wrapper">
-      <h1 className="login-header">Koura</h1>
+      <h1 className="login-header">Koura Sign Up!</h1>
     <form className="signup-form" onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}

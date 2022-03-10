@@ -28,7 +28,7 @@ const validateSignup = [
 ];
 
 router.get('/', asyncHandler(async (req,res) => {
-  const user = await user.findAll();
+  const user = await User.findAll();
   return res.json(user);
 }))
 
@@ -48,7 +48,7 @@ router.post(
     await setTokenCookie(res, user);
 
     return res.json({
-      user,
+      user
     });
   }),
 );

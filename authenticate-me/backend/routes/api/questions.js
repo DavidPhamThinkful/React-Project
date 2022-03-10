@@ -4,7 +4,7 @@ const {Question, User} = require('../../db/models');
 const router = express.Router();
 
 router.get('/', asyncHandler(async (req,res) =>{
-    const questions = await Answer.findAll({
+    const questions = await Question.findAll({
         include: {model: User},
         order: [['createdAt', 'DESC']]
     });
@@ -13,7 +13,7 @@ router.get('/', asyncHandler(async (req,res) =>{
 
 router.post('/', asyncHandler(async (req,res) => {
     const {ownerId, title, description} = req.body;
-    const question = await Answer.create({
+    const question = await Question.create({
         ownerId,
         title,
         description
