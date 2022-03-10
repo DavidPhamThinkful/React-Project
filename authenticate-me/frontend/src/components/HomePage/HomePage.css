@@ -39,24 +39,7 @@
   resize: none;
 }
 
-.language-container {
-  position: fixed;
-  top: 80px;
-  left: 250px;
-}
-
-
-.leftbar-languages {
-  list-style: none;
-  margin: 5px;
-}
-
-.leftbar-languages > li {
-  padding: 5px;
-}
-
 .question-container {
-
   box-shadow: 0 0 8px rgb(131, 130, 130);
   border-radius: 3px;
   margin: 10px;

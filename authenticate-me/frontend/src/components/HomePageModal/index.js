@@ -10,7 +10,7 @@ function HomePageModal() {
 
     return (
         <>
-            <button className="homepage-modal" onClick={() => setShowModal(true)}>{`${sessionUser?.username}, Time to ask a question!`}</button>
+            <button className="home-page-modal" onClick={() => setShowModal(true)}>{`${sessionUser?.username}, Want to ask a question? Click here!`}</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <CreateQuestion setShowModal={setShowModal} />
