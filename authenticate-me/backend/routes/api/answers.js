@@ -27,7 +27,7 @@ router.get('/:id(\\d+)', asyncHandler(async (req,res) =>{
     return res.json(answer);
 }))
 
-router.delete('./id(\\d+)', asyncHandler(async (req,res) =>{
+router.delete('/:id(\\d+)', asyncHandler(async (req,res) =>{
     const answer = await Answer.findByPk(req.params.id);
     if(answer) {
         await answer.destroy()

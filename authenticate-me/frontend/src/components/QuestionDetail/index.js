@@ -35,7 +35,7 @@ const QuestionDetail = () => {
 
   if (!choice) {
     return (
-      <h1>There was no questions found!</h1>
+      <h1>No Question Found</h1>
     )
   }
 
@@ -60,8 +60,8 @@ const QuestionDetail = () => {
           <h1 className="question-title">{choice?.title}</h1>
           <p className='the-usersname-edit'>{`Asked by ${choice?.User?.username}`}</p>
           <p className='question-description-edit'>{choice?.description}</p>
-          {sessionUser?.id === choice.ownerId ? <NavLink className='edit-button' to={`/questions/${id}/edit`}>Edit Question!</NavLink> : <></>}
-          {sessionUser?.id === choice.ownerId ? <button className="delete-button" onClick={handleDelete} type='submit'>Delete Question!</button> : <></>}
+          {sessionUser?.id === choice.ownerId ? <NavLink className='edit-button' to={`/questions/${id}/edit`}>Edit</NavLink> : <></>}
+          {sessionUser?.id === choice.ownerId ? <button className="delete-button" onClick={handleDelete} type='submit'>Delete Question</button> : <></>}
         </div>
       </div>
       <div className="answer-button-container">
