@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {Modal} from '../../context/Modal';
 import './AddAnswerModal.css'
 import CreateAnswer from '../CreateAnswer';
-import './AddAnswerModal.css';
 
 function AddAnswerModal() {
     const [showModal, setShowModal] = useState(false);
