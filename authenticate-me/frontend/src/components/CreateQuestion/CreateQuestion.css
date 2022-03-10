@@ -1,28 +1,34 @@
-.title-label, .description-label {
-    padding: 10px;
-    font-weight: bold;
+.title-label {
+  font-weight: bold;
+  padding: 8px;
+}
+
+.description-label {
+  font-weight: bold;
+  padding: 8px;
 }
 
 .question-form {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    margin: 50px;
-}
-
-.submit-question {
-    background-color: aqua;
-    border: none;
-    padding: .5em 1em;
-    border-radius: 5px;
-    margin: 10px;
-    text-transform: uppercase;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
 }
 
 .errors {
-    text-align: center;
-    font-weight: bold;
-    padding: 4px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+}
+
+.submit-question {
+  border: none;
+  background-color: lightblue;
+  border-radius: 5px;
+  padding: .5em 1em;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: background-color .25s, color .25s;
+  cursor: pointer;
 }

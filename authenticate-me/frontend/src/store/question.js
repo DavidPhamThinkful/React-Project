@@ -60,7 +60,7 @@ export const deleteQuestion = (data) => async (dispatch) => {
     if (response.ok){
         const deleted = await response.json();
         dispatch(removeQuestion(deleted));
-        return deleted;
+        
     }
 }
 
