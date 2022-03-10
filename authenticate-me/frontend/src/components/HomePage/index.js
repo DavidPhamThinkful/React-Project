@@ -8,11 +8,11 @@ import HomePageModal from "../HomePageModal";
 
 const HomePage = () => {
   const dispatch = useDispatch();
-  const question = useSelector(state => state.question)
+  const question = useSelector(state => state.question.entries)
   const sessionUser = useSelector(state => state.session.user);
 
   useEffect(() => {
-    dispatch(getAllQuestions());
+    dispatch(getAllQuestions())
     dispatch(sessionActions.getAllUsers())
     dispatch(sessionActions.restore());
   }, [dispatch])
