@@ -9,7 +9,7 @@ function QuestionModal () {
 
     return(
         <>
-            <button className="newquestion-button" onClick={() => setShowModal(true)}>Ask a question here!</button>
+            <button className="newquestion-button" onClick={() => setShowModal(true)}>Ask a question</button>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <CreateQuestion setShowModal={setShowModal} />    

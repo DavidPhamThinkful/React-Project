@@ -20,7 +20,7 @@ function Navigation({ isLoaded }){
       <ul className='header'>
         <NavLink to='/' className='home-button'>Home</NavLink>
         <QuestionModal modalClose={modalClose} />
-      <ProfileButton user={sessionUser} />
+        <ProfileButton user={sessionUser} />
       </ul>
       </div>
     );

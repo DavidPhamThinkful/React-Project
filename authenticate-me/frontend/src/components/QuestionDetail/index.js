@@ -82,16 +82,6 @@ const QuestionDetail = () => {
           </div>
         )
       })}
-      <div className='related-questions-container'>
-        <h2 className='related-questions-title'>Related Questions</h2>
-        {questions && questions.map((question) => {
-          return (
-            <div className="other-questions-container">
-              <NavLink key={question.id} className='related-question' to={`/questions/${question.id}`}>{question.title}</NavLink>
-            </div>
-          )
-        })}
-      </div>
     </div>
   )
 }

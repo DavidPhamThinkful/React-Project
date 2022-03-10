@@ -6,7 +6,7 @@ import './HomePageModal.css';
 
 function HomePageModal() {
     const sessionUser = useSelector(state => state.session.user);
-    const [showModal, setShowModal] = useState();
+    const [showModal, setShowModal] = useState(false);
 
     return (
         <>

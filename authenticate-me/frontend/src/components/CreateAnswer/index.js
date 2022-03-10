@@ -26,7 +26,7 @@ const AddAnswer = ({setShowModal}) => {
         const userId = sessionUser.id;
         const newAnswer = {
             userId,
-            question:id,
+            questionId: id,
             answer
         }
         await dispatch(answerActions.createAnswer(newAnswer))
