@@ -25,6 +25,7 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <SplashPage />
+            <SplashPicture/>
             <HomePage />
             
           </Route>
@@ -33,11 +34,11 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route exact path='/questions/:id'>
-        
+            <SplashPicture />
             <QuestionDetail />
             </Route>
           <Route path='/questions/:id/edit'>
-            
+            <SplashPicture />
             <UpdateQuestion />
             </Route>
         </Switch>

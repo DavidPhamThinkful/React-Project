@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import './SplashPage.css'
 import LoginFormPage from "../LoginFormPage";
-import SplashPicture from "../SplashPicture";
+//import SplashPicture from "../SplashPicture";
 
 
 function SplashPage() {
@@ -13,7 +13,7 @@ function SplashPage() {
     } else {
         return (
             <div className="splash-container">
-                <SplashPicture />
+                
                 <LoginFormPage />
             </div>
         )

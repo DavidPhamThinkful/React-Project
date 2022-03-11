@@ -20,13 +20,13 @@
   padding: .5em 1em;
   margin: 10px;
   text-transform: uppercase;
-  transition: background-color .25s, color .25s;
+  transition: .25s, color .25s;
   cursor: pointer;
 }
 
 
 .the-usersname-edit {
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -45,7 +45,6 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  margin-top: 100px;
   margin-bottom: 10px;
 }
 

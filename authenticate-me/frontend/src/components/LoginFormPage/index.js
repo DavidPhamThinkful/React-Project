@@ -29,7 +29,7 @@ function LoginFormPage() {
 
   const demoUser = async (e) => {
     e.preventDefault();
-    return dispatch(sessionActions.login({ credential: 'Demo-user', password: 'pasword'}))
+    return dispatch(sessionActions.login({ credential: 'Demo510', password: 'password'}))
   }
 
   return (

@@ -6,7 +6,7 @@ module.exports = {
       {
         userId: 1,
         questionId: 1,
-        answer: 'answer test 1',
+        answer: 'Take melatonin! It helps!',
         createdAt: new Date(),
         updatedAt: new Date()
 
@@ -14,14 +14,14 @@ module.exports = {
     {
       userId: 2,
         questionId: 1,
-        answer: 'answer test 2',
+        answer: 'Listen to waves crashing',
         createdAt: new Date(),
         updatedAt: new Date()
     },
     {
       userId: 3,
         questionId: 2,
-        answer: 'answer test 3',
+        answer: 'What do you mean? It contrasts the heaviness of the pizza with some sweetness! Your taste buds need help buddy',
         createdAt: new Date(),
         updatedAt: new Date()
     }

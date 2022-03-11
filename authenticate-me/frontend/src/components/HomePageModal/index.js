@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { useSelector} from "react-redux";
+//import { useSelector} from "react-redux";
 import CreateQuestion from '../CreateQuestion';
 import { Modal } from "../../context/Modal";
 import './HomePageModal.css';
 
 function HomePageModal() {
-    const sessionUser = useSelector(state => state.session.user);
+    //const sessionUser = useSelector(state => state.session.user);
     const [showModal, setShowModal] = useState(false);
 
     return (
         <>
-            <button className="home-page-modal" onClick={() => setShowModal(true)}>{`${sessionUser?.username}, Want to ask a question? Click here!`}</button>
+            <h1 className="home-page-modal">Here are all the questions!</h1>
             {showModal && (
                 <Modal onClose={() => setShowModal(false)}>
                     <CreateQuestion setShowModal={setShowModal} />
