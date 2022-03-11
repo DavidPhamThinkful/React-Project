@@ -6,7 +6,7 @@
   font-size: 20px;
   color: black;
   background-color: white;
-  border: none;
+  border: 3px solid black;
   cursor: pointer;
   margin-bottom: 20px;
   box-shadow: 0 0 8px rgb(131, 130, 130);

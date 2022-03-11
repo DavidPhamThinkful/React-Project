@@ -108,3 +108,8 @@
 .other-questions-container {
   z-index: 1;
 }
+
+.answer-button-container{
+  display: flex;
+  justify-content: center;
+}

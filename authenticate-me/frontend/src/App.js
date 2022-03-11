@@ -33,9 +33,11 @@ function App() {
             <SignupFormPage />
           </Route>
           <Route exact path='/questions/:id'>
+        
             <QuestionDetail />
             </Route>
           <Route path='/questions/:id/edit'>
+            
             <UpdateQuestion />
             </Route>
         </Switch>

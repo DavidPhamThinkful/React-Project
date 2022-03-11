@@ -35,18 +35,17 @@ router.delete('/:id(\\d+)', asyncHandler(async (req,res) =>{
     return res.json(answer)
 }))
 
-router.put('/:id(\\d+)', asyncHandler(async (req, res, next) =>{
-    const {answer} = req.body;
-    const newAnswer = await Answer.findByPk(req.params.id);
-
-    if (newAnswer) {
-        await newAnswer.update({
-            answer
-        });
-        return res.json(newAnswer);
-    } else {
-        next();
-    }
+router.put('/:id(\\d+)', asyncHandler(async (req, res, next) => {
+  const { answer } = req.body;
+  const newAnswer = await Answer.findByPk(req.params.id);
+  if (newAnswer) {
+    await newAnswer.update({
+      answer
+    });
+    return res.json(newAnswer);
+  } else {
+    next();
+  }
 }))
 
 module.exports = router;
