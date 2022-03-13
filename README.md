@@ -35,7 +35,7 @@ Koura is the place to ask any question with your hearts desire for some helpful 
 
 8. You can use the Demo user or create an account to begin when using Koura. 
 
-#Features
+# Features
 Logged in users can perform the following actions
 * `Create, Update, View, Delete questions`
 * `Create, Update, View, Delete answers`
