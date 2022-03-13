@@ -10,6 +10,14 @@ Koura is the place to ask any question with your hearts desire for some helpful 
 
 
 # Technologies Used
+* Javascript
+* React
+* Redux
+* Express
+* PostgreSQL
+* HTML5
+* CSS
+* Git
 
 # Getting Started
 1. Clone this repo
